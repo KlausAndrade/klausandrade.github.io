@@ -2,5 +2,5 @@
 
 ## Resume - Full-stack Developer
 
-[Klaus Andrade - site](https://www.klausandrade.github.io)
+[Klaus Andrade - site](https://klausandrade.github.io)
 
