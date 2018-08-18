@@ -45,7 +45,7 @@ body {
 .klaus h1:before{background-color:#fff;position: absolute;height: 100%;content:'';animation: animate-title .6s cubic-bezier(0.215, 0.610, 0.355, 1) .4s;}
 .klaus h2:before{background-color:#fff;position: absolute;height: 100%;content:'';animation: animate-title .8s cubic-bezier(0.215, 0.610, 0.355, 1) .5s}
 .klaus .container {
-    width: 50vw;
+    width: 80vw;
 }
 .klaus .container img {
 	margin-bottom: 20px;
@@ -363,9 +363,16 @@ main {
 	.grid__item-text {
 		width: 100%;
 	}
+	.klaus .container {
+		width: 50vw;
+		margin-top: 50px;
+	}
 }
 
 @media screen and (min-width: 50em) {
+	.klaus .container{
+		width: 50vw;
+	}
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(2,50vmax);
