@@ -1,0 +1,38 @@
+# Privacy Policy for Gym AI
+
+Last updated: October 6, 2025
+
+## Information We Collect
+- Email address (for authentication)
+- Display name
+- Workout data (stored locally and optionally synced)
+- Profile information (if you choose to share)
+- Social interactions (posts, comments, likes, follows)
+
+## How We Use Your Information
+- To provide and maintain our service
+- To authenticate your account
+- To enable social features
+- To improve our app
+
+## Data Storage
+- Local data stored on your device using SQLite
+- Cloud sync via Supabase (optional)
+- Images stored on Supabase Storage
+
+## Third-Party Services
+- Supabase (authentication and database)
+- Facebook Login (authentication only)
+- Google OAuth (authentication only)
+- Apple Sign In (authentication only)
+
+## Your Rights
+- Access your data
+- Delete your account and data
+- Opt-out of data collection
+
+## Contact
+Email: klaus.dev@outlook.com
+
+## Changes to This Policy
+We may update this policy from time to time.
