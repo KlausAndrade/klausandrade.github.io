@@ -1,6 +1,4 @@
-# Klaus Bernardo De Andrade
+# Klaus Andrade
 
-## Resume - Full-stack Developer
-
-[Klaus Andrade - site](https://klausandrade.github.io)
+Senior Backend Engineer · [klausandrade.github.io](https://klausandrade.github.io)
 
