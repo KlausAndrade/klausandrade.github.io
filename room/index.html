@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Room for Rent in Valby — Available August 1st</title>
+    <meta
+      name="description"
+      content="Cozy private room in a bright, beautifully laid-out 74m² apartment. All bills & Wi-Fi included. Available August 1st — 6-month fixed stay. Professionals & students welcome."
+    />
+    <meta
+      property="og:title"
+      content="Bright Room for Rent in Valby — Available Aug 1st"
+    />
+    <meta
+      property="og:description"
+      content="Cozy room in a stylish 74m² apartment. All bills & Wi-Fi included. 6-month fixed stay."
+    />
+    <meta
+      property="og:image"
+      content="https://klausandrade.github.io/room/img/01-living-room.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      :root {
+        --bg: #faf9f7;
+        --surface: #ffffff;
+        --ink: #1f2421;
+        --muted: #6b7069;
+        --accent: #3e5c4b;
+        --accent-soft: #e8efe9;
+        --line: #e7e4de;
+        --radius: 14px;
+        --shadow: 0 2px 20px rgba(31, 36, 33, 0.07);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: var(--accent);
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Nav */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(250, 249, 247, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 58px;
+      }
+      nav .brand {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--ink);
+        font-size: 15px;
+      }
+      nav .brand span {
+        color: var(--accent);
+      }
+      nav .links {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+      }
+      nav .links a {
+        text-decoration: none;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      nav .links a:hover {
+        color: var(--ink);
+      }
+      nav .links a.cta {
+        background: var(--accent);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 99px;
+        font-weight: 600;
+      }
+      @media (max-width: 640px) {
+        nav .links a:not(.cta) {
+          display: none;
+        }
+      }
+
+      /* Hero */
+      header {
+        padding: 52px 0 34px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 99px;
+        margin-bottom: 18px;
+      }
+      .badge::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      h1 {
+        font-size: clamp(30px, 5vw, 46px);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+        max-width: 760px;
+      }
+      .sub {
+        margin-top: 14px;
+        font-size: 18px;
+        color: var(--muted);
+        max-width: 640px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+      .chip {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        box-shadow: var(--shadow);
+      }
+      .chip b {
+        color: var(--accent);
+      }
+
+      /* Gallery */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 130px;
+        gap: 10px;
+        margin: 34px 0 8px;
+      }
+      .gallery a {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius);
+        display: block;
+        background: var(--line);
+      }
+      .gallery a[hidden] {
+        display: none;
+      }
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.45s ease;
+      }
+      .gallery a:hover img {
+        transform: scale(1.045);
+      }
+      .gallery a:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 3;
+      }
+      .gallery a:nth-child(2) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .gallery a:nth-child(3) {
+        grid-row: span 1;
+      }
+      .gallery a:nth-child(4) {
+        grid-row: span 1;
+      }
+      .more-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(31, 36, 33, 0.55);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      @media (max-width: 700px) {
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: 110px;
+        }
+        .gallery a:nth-child(1) {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+        .gallery a:nth-child(2) {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+      }
+      .gallery-note {
+        font-size: 13px;
+        color: var(--muted);
+        text-align: right;
+      }
+
+      /* Sections */
+      section {
+        padding: 44px 0;
+      }
+      h2 {
+        font-size: 26px;
+        letter-spacing: -0.01em;
+        margin-bottom: 20px;
+        font-weight: 750;
+      }
+      h2 small {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 6px;
+      }
+
+      /* Facts */
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 14px;
+      }
+      .fact {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: var(--shadow);
+      }
+      .fact .label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .fact .value {
+        font-size: 20px;
+        font-weight: 750;
+      }
+      .fact .note {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      /* Two-col */
+      .cols {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 36px;
+        align-items: start;
+      }
+      @media (max-width: 800px) {
+        .cols {
+          grid-template-columns: 1fr;
+        }
+      }
+      .prose p {
+        margin-bottom: 14px;
+        color: #3a3f3b;
+      }
+      .list {
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+      .list li {
+        gap: 12px;
+        align-items: flex-start;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 12px 16px;
+        font-size: 15px;
+      }
+      .list li::before {
+        content: "✓";
+        color: var(--accent);
+        font-weight: 800;
+        flex-shrink: 0;
+      }
+      .side-img {
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .side-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      /* Terms table */
+      .terms {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .terms tr + tr {
+        border-top: 1px solid var(--line);
+      }
+      .terms td {
+        padding: 14px 18px;
+        font-size: 15px;
+        vertical-align: top;
+      }
+      .terms td:first-child {
+        font-weight: 600;
+        width: 38%;
+        color: var(--muted);
+      }
+      .ph {
+        background: #fff7e6;
+        border: 1px dashed #e0b954;
+        border-radius: 6px;
+        padding: 1px 7px;
+        font-size: 0.92em;
+        white-space: nowrap;
+      }
+
+      /* Contact */
+      .contact-card {
+        background: var(--accent);
+        color: #fff;
+        border-radius: 20px;
+        padding: 44px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 30px;
+        align-items: center;
+      }
+      @media (max-width: 700px) {
+        .contact-card {
+          grid-template-columns: 1fr;
+          padding: 32px;
+        }
+      }
+      .contact-card h2 {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .contact-card p {
+        opacity: 0.85;
+        margin-bottom: 22px;
+      }
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 13px 26px;
+        border-radius: 99px;
+        font-size: 15px;
+      }
+      .btn.light {
+        background: #fff;
+        color: var(--accent);
+      }
+      .btn.ghost {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        color: #fff;
+      }
+      .btn:hover {
+        opacity: 0.92;
+      }
+      .contact-meta {
+        font-size: 15px;
+        line-height: 2;
+        opacity: 0.95;
+      }
+
+      footer {
+        padding: 34px 0 46px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+      footer a {
+        color: var(--muted);
+      }
+
+      /* Lightbox */
+      .lb {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 17, 16, 0.94);
+        display: none;
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .lb.open {
+        display: flex;
+      }
+      .lb img {
+        max-width: 92vw;
+        max-height: 82vh;
+        border-radius: 8px;
+        object-fit: contain;
+      }
+      .lb .cap {
+        color: #cfd4cf;
+        font-size: 14px;
+        margin-top: 14px;
+      }
+      .lb button {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        cursor: pointer;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .lb button:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+      .lb .close {
+        top: 18px;
+        right: 18px;
+      }
+      .lb .prev {
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .lb .next {
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap">
+        <a class="brand" href="#top">Room for rent</a>
+        <div class="links">
+          <a href="#photos">Photos</a>
+          <a href="#room">The Room</a>
+          <a href="#apartment">The Apartment</a>
+          <a href="#terms">Terms</a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="top">
+      <div class="wrap">
+        <div class="badge">Available from August 1st, 2026</div>
+        <h1>Bright private room in a stylish, newly renovated apartment</h1>
+        <p
+          style="
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 14px;
+            padding: 12px 16px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+          "
+        >
+          <span style="font-weight: bold">Important note:</span> <br />
+          The room is currently set up as a home office in the photos.<br />
+          The furnishing from the photos will be replaced with a completely new
+          setup. including the office room.
+        </p>
+        <p class="sub">
+          Sunny room in a calm, green neighborhood in Valby, Copenhagen — shared
+          with one friendly backend software engineer. All bills and fast Wi-Fi
+          included.
+        </p>
+        <div class="chips">
+          <div class="chip"><b>6.000 kr.</b>/month — all inclusive</div>
+          <div class="chip">Unfurnished or Fully Furnished</div>
+          <div class="chip">6-Month Fixed Stay</div>
+          <div class="chip">Balcony &amp; Courtyard</div>
+          <div class="chip">Professionals &amp; Students welcome</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap" id="photos">
+      <div class="gallery" id="gallery">
+        <a href="img/01-living-room.jpg" data-cap="Shared living room layout"
+          ><img
+            src="img/01-living-room.jpg"
+            alt="Shared living room with cozy sofa"
+        /></a>
+        <a
+          href="img/10-office-room.jpg"
+          data-cap="The room — currently setup as an office (Will be delivered empty/unfurnished)"
+          ><img
+            src="img/10-office-room.jpg"
+            alt="The room window space"
+            loading="lazy"
+        /></a>
+        <a href="img/05-kitchen.jpg" data-cap="Fully equipped shared kitchen"
+          ><img src="img/05-kitchen.jpg" alt="Modern kitchen" loading="lazy"
+        /></a>
+        <a
+          href="img/13-balcony.jpg"
+          data-cap="Southwest-facing balcony with great sun exposure"
+          ><img src="img/13-balcony.jpg" alt="Balcony" loading="lazy"
+        /></a>
+        <a
+          href="img/07-bathroom.jpg"
+          data-cap="Tiled bathroom with separate shower stall"
+          ><img src="img/07-bathroom.jpg" alt="Bathroom" loading="lazy" /><span
+            class="more-overlay"
+            >+13 photos</span
+          ></a
+        >
+        <!-- Lightbox-only photos -->
+        <a
+          href="img/08-bedroom.jpg"
+          data-cap="Master bedroom layout"
+          hidden
+        ></a>
+        <a
+          href="img/09-bedroom-wardrobe.jpg"
+          data-cap="Master bedroom wardrobe layout"
+          hidden
+        ></a>
+        <a
+          href="img/02-living-room-tv.jpg"
+          data-cap="Living room — layout profile"
+          hidden
+        ></a>
+        <a
+          href="img/03-dining-room.jpg"
+          data-cap="Dining alcove area"
+          hidden
+        ></a>
+        <a
+          href="img/04-living-room-hall.jpg"
+          data-cap="Living room towards the entrance hall"
+          hidden
+        ></a>
+        <a
+          href="img/06-kitchen-hall.jpg"
+          data-cap="Kitchen entrance profile"
+          hidden
+        ></a>
+        <a
+          href="img/11-hallway.jpg"
+          data-cap="Central entrance hallway"
+          hidden
+        ></a>
+        <a
+          href="img/12-entrance.jpg"
+          data-cap="Apartment entrance portal"
+          hidden
+        ></a>
+        <a
+          href="img/14-balcony-view.jpg"
+          data-cap="Open view from the private balcony"
+          hidden
+        ></a>
+        <a
+          href="img/15-garden.jpg"
+          data-cap="Large common green courtyard area"
+          hidden
+        ></a>
+        <a
+          href="img/16-building-rear.jpg"
+          data-cap="Quiet garden property background"
+          hidden
+        ></a>
+        <a
+          href="img/17-building-aerial.jpg"
+          data-cap="Neighborhood open context"
+          hidden
+        ></a>
+        <a
+          href="img/18-floor-plan.jpg"
+          data-cap="Official floor plan (74m² layout)"
+          hidden
+        ></a>
+      </div>
+      <p class="gallery-note">
+        Click any photo to browse all 18 pictures + floor plan
+      </p>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <h2><small>At a glance</small>Key facts</h2>
+        <div class="facts">
+          <div class="fact">
+            <div class="label">Monthly rent</div>
+            <div class="value">6.000 kr.</div>
+            <div class="note">All utilities, heating &amp; Wi-Fi included</div>
+          </div>
+          <div class="fact">
+            <div class="label">Deposit</div>
+            <div class="value">12.000 kr.</div>
+            <div class="note">2 months rent, fully refundable at move-out</div>
+          </div>
+          <div class="fact">
+            <div class="label">Available from</div>
+            <div class="value">August 1st, 2026</div>
+            <div class="note">Takeover date framework</div>
+          </div>
+          <div class="fact">
+            <div class="label">Minimum stay</div>
+            <div class="value">6 Months</div>
+            <div class="note">Fixed-term sub-lease contract</div>
+          </div>
+          <div class="fact">
+            <div class="label">Room size</div>
+            <div class="value">≈ 8 m²</div>
+            <div class="note">In a 74 m² two-bedroom apartment</div>
+          </div>
+          <div class="fact">
+            <div class="label">Floor</div>
+            <div class="value">First floor</div>
+            <div class="note">Elevator: No</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="room" style="padding-top: 0">
+      <div class="wrap cols">
+        <div class="prose">
+          <h2><small>Your space</small>The room</h2>
+          <p>
+            A functional, quiet private room (approx. 3.80m × 2.12m) featuring a
+            large window facing east for beautiful morning light. The smart
+            layout perfectly fits a double bed lengthwise across the wall,
+            leaving plenty of remaining floor space for a wardrobe and your
+            custom bedroom layout.
+          </p>
+          <p>
+            <strong>Note on furniture:</strong> The current images show the
+            previous owner's home office setup (`img/10-office-room.jpg`). The
+            entire apartment is being fully cleared out and refurnished. Your
+            room will be delivered 100% clean, freshly prepared, and entirely
+            unfurnished, giving you a completely fresh canvas to style your own
+            space.
+          </p>
+          <ul class="list">
+            <li style="margin-left: 4px">
+              Cozy 8 m² private footprint with high 2.59m ceilings
+            </li>
+            <li style="margin-left: 4px">
+              Large window looking out over quiet residential areas
+            </li>
+            <li style="margin-left: 4px">
+              Freshly painted walls and authentic wood floors
+            </li>
+            <li style="margin-left: 4px">
+              Fits a standard double bed wall-to-wall comfortably
+            </li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="side-img">
+            <img
+              src="img/10-office-room.jpg"
+              alt="The bedroom space currently configured as an office"
+              loading="lazy"
+            />
+          </div>
+          <div class="side-img">
+            <img
+              src="img/18-floor-plan.jpg"
+              alt="Official unit floor plan layout"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apartment" style="padding-top: 0">
+      <div class="wrap cols">
+        <div class="stack">
+          <div class="side-img">
+            <img
+              src="img/01-living-room.jpg"
+              alt="Shared living room space"
+              loading="lazy"
+            />
+          </div>
+          <div class="side-img">
+            <img
+              src="img/13-balcony.jpg"
+              alt="Southwest facing open balcony"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="prose">
+          <h2><small>Shared spaces</small>The apartment</h2>
+          <p>
+            A beautifully structured 74 m² apartment with an optimal layout for
+            shared living. The common zones are being freshly refurnished with
+            minimalist, clutter-free aesthetics. You will be sharing the
+            apartment with one easy-going professional backend engineer in his
+            late 20s.
+          </p>
+          <ul class="list">
+            <li>Bright shared living room with direct balcony connection</li>
+            <li>Premium southwest-facing balcony (perfect afternoon sun)</li>
+            <li>
+              Fully functional modern kitchen with standard appliances and a
+              dishwasher
+            </li>
+            <li>Tiled bathroom with separate enclosed shower stall</li>
+            <li>
+              Massive communal green courtyard with lawn areas, trees, and
+              shared grills
+            </li>
+            <li>
+              Shared laundry facilities and secure bicycle cellars in the
+              building basement
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top: 0">
+      <div class="wrap">
+        <h2><small>Getting around</small>Location</h2>
+        <div class="cols">
+          <div class="prose">
+            <p>
+              Situated in the quiet, historic Blommehaven neighborhood on
+              Vigerslevvej in Valby. It balances scenic outdoor recreation
+              options with elite transit access into central Copenhagen.
+            </p>
+            <ul class="list">
+              <li>
+                Short walk to major transport nodes at
+                <strong>København Syd St.</strong> (Metro/S-train hub) and
+                <strong>Åmarken St.</strong> (Metro/S-train hub)
+              </li>
+              <li>
+                Directly across the street from the green running paths of
+                <strong>Vigerslevparken</strong>
+              </li>
+              <li>
+                Easy access to the massive waterfront lawns at
+                <strong>Valbyparken</strong>
+              </li>
+              <li>
+                Local convenience stores, Netto, and Lidl supermarkets within
+                easy walking distance
+              </li>
+              <li>Free street parking options along nearby community tracks</li>
+            </ul>
+          </div>
+          <div class="side-img">
+            <img
+              src="img/17-building-aerial.jpg"
+              alt="Aerial view of the building and green community areas"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms" style="padding-top: 0">
+      <div class="wrap">
+        <h2><small>The practical part</small>Rental terms</h2>
+        <table class="terms">
+          <tr>
+            <td>Monthly rent</td>
+            <td>
+              6.000 kr. — Fixed flat rate including heating, water, electricity,
+              and high-speed Wi-Fi
+            </td>
+          </tr>
+          <tr>
+            <td>Deposit</td>
+            <td>
+              12.000 kr. (Equivalent to 2 months rent, fully refundable at
+              move-out)
+            </td>
+          </tr>
+          <tr>
+            <td>Prepaid rent</td>
+            <td>0 kr. (No steep prepaid monthly balances required upfront)</td>
+          </tr>
+          <tr>
+            <td>Available from</td>
+            <td>August 1st, 2026</td>
+          </tr>
+          <tr>
+            <td>Lease duration</td>
+            <td>6 Months (Fixed-term framework)</td>
+          </tr>
+          <tr>
+            <td>Notice period</td>
+            <td>1 month prior written tracking standard</td>
+          </tr>
+          <tr>
+            <td>Contract</td>
+            <td>
+              Formal written rental contract provided (Sublease room standard)
+            </td>
+          </tr>
+          <tr>
+            <td>Ideal tenant</td>
+            <td>
+              Working professional or student — tidy, reliable, and respectful
+              of home routines
+            </td>
+          </tr>
+          <tr>
+            <td>Smoking</td>
+            <td>Smoking is not allowed</td>
+          </tr>
+          <tr>
+            <td>Pets</td>
+            <td>No pets allowed per building parameters</td>
+          </tr>
+          <tr>
+            <td>Registration</td>
+            <td>
+              Yes, legal address registration (CPR / Folkeregister) is fully
+              available
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact" style="padding-top: 0">
+      <div class="wrap">
+        <div class="contact-card">
+          <div>
+            <h2>Interested? Let's connect!</h2>
+            <p>
+              Because the physical property takeover happens in August, initial
+              physical viewings are restricted until then. We can easily arrange
+              a video call to introduce ourselves, review the layout blueprints,
+              and verify formal documentation to make things fully secure and
+              transparent for you.
+            </p>
+            <div class="btns">
+              <a
+                class="btn light"
+                href="mailto:klaus@slidehub.com?subject=Valby%20Room%20Sublet%20Inquiry"
+                >Email me</a
+              >
+            </div>
+          </div>
+          <div class="contact-meta">
+            <strong>Klaus</strong><br />
+            📍 Vigerslevvej 311, Valby, Copenhagen
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="lb" id="lb" role="dialog" aria-label="Photo viewer">
+      <button class="close" aria-label="Close">✕</button>
+      <button class="prev" aria-label="Previous">‹</button>
+      <img id="lb-img" src="" alt="" />
+      <div class="cap" id="lb-cap"></div>
+      <button class="next" aria-label="Next">›</button>
+    </div>
+
+    <script>
+      (function () {
+        var links = [].slice.call(document.querySelectorAll("#gallery a"));
+        var lb = document.getElementById("lb"),
+          img = document.getElementById("lb-img"),
+          cap = document.getElementById("lb-cap"),
+          i = 0;
+        function show(n) {
+          i = (n + links.length) % links.length;
+          img.src = links[i].getAttribute("href");
+          cap.textContent =
+            i + 1 + " / " + links.length + " — " + (links[i].dataset.cap || "");
+        }
+        function open(n) {
+          show(n);
+          lb.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function close() {
+          lb.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+        links.forEach(function (a, n) {
+          a.addEventListener("click", function (e) {
+            e.preventDefault();
+            open(n);
+          });
+        });
+        lb.querySelector(".close").onclick = close;
+        lb.querySelector(".prev").onclick = function () {
+          show(i - 1);
+        };
+        lb.querySelector(".next").onclick = function () {
+          show(i + 1);
+        };
+        lb.addEventListener("click", function (e) {
+          if (e.target === lb) close();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (!lb.classList.contains("open")) return;
+          if (e.key === "Escape") close();
+          if (e.key === "ArrowLeft") show(i - 1);
+          if (e.key === "ArrowRight") show(i + 1);
+        });
+      })();
+    </script>
+  </body>
+</html>
