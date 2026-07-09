@@ -102,6 +102,25 @@
       nav .links a:hover {
         color: var(--ink);
       }
+      nav .links a.social {
+        display: inline-flex;
+        align-items: center;
+        color: var(--muted);
+      }
+      nav .links a.social:hover {
+        color: var(--accent);
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
       nav .links a.cta {
         background: var(--accent);
         color: #fff;
@@ -440,6 +459,27 @@
         line-height: 2;
         opacity: 0.95;
       }
+      .contact-social {
+        display: flex;
+        gap: 14px;
+        margin-top: 16px;
+      }
+      .contact-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.15s ease;
+      }
+      .contact-social a:hover {
+        background: #fff;
+        color: var(--accent);
+      }
 
       footer {
         padding: 34px 0 46px;
@@ -519,6 +559,46 @@
           <a href="#room">The Room</a>
           <a href="#apartment">The Apartment</a>
           <a href="#terms">Terms</a>
+          <a
+            class="social"
+            href="https://www.instagram.com/klauslife10/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.8c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32-1.24-.06-1.59-.07-4.74-.07Zm0 3.06a4.98 4.98 0 1 1 0 9.96 4.98 4.98 0 0 1 0-9.96Zm0 1.8a3.18 3.18 0 1 0 0 6.36 3.18 3.18 0 0 0 0-6.36Zm5.18-.99a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0Z"
+              />
+            </svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a
+            class="social"
+            href="https://www.facebook.com/klaus.web"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"
+              />
+            </svg>
+            <span class="sr-only">Facebook</span>
+          </a>
         </div>
       </div>
     </nav>
@@ -780,18 +860,24 @@
             late 20s.
           </p>
           <ul class="list">
-            <li>Bright shared living room with direct balcony connection</li>
-            <li>Premium southwest-facing balcony (perfect afternoon sun)</li>
-            <li>
+            <li style="margin-left: 4px">
+              Bright shared living room with direct balcony connection
+            </li>
+            <li style="margin-left: 4px">
+              Premium southwest-facing balcony (perfect afternoon sun)
+            </li>
+            <li style="margin-left: 4px">
               Fully functional modern kitchen with standard appliances and a
               dishwasher
             </li>
-            <li>Tiled bathroom with separate enclosed shower stall</li>
-            <li>
+            <li style="margin-left: 4px">
+              Tiled bathroom with separate enclosed shower stall
+            </li>
+            <li style="margin-left: 4px">
               Massive communal green courtyard with lawn areas, trees, and
               shared grills
             </li>
-            <li>
+            <li style="margin-left: 4px">
               Shared laundry facilities and secure bicycle cellars in the
               building basement
             </li>
@@ -811,24 +897,26 @@
               options with elite transit access into central Copenhagen.
             </p>
             <ul class="list">
-              <li>
+              <li style="margin-left: 4px">
                 Short walk to major transport nodes at
                 <strong>København Syd St.</strong> (Metro/S-train hub) and
                 <strong>Åmarken St.</strong> (Metro/S-train hub)
               </li>
-              <li>
+              <li style="margin-left: 4px">
                 Directly across the street from the green running paths of
                 <strong>Vigerslevparken</strong>
               </li>
-              <li>
+              <li style="margin-left: 4px">
                 Easy access to the massive waterfront lawns at
                 <strong>Valbyparken</strong>
               </li>
-              <li>
+              <li style="margin-left: 4px">
                 Local convenience stores, Netto, and Lidl supermarkets within
                 easy walking distance
               </li>
-              <li>Free street parking options along nearby community tracks</li>
+              <li style="margin-left: 4px">
+                Free street parking options along nearby community tracks
+              </li>
             </ul>
           </div>
           <div class="side-img">
@@ -920,17 +1008,50 @@
               and verify formal documentation to make things fully secure and
               transparent for you.
             </p>
-            <div class="btns">
-              <a
-                class="btn light"
-                href="mailto:klaus@slidehub.com?subject=Valby%20Room%20Sublet%20Inquiry"
-                >Email me</a
-              >
-            </div>
           </div>
           <div class="contact-meta">
             <strong>Klaus</strong><br />
             📍 Vigerslevvej 311, Valby, Copenhagen
+            <div class="contact-social">
+              <a
+                href="https://www.instagram.com/klauslife10/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.8c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32-1.24-.06-1.59-.07-4.74-.07Zm0 3.06a4.98 4.98 0 1 1 0 9.96 4.98 4.98 0 0 1 0-9.96Zm0 1.8a3.18 3.18 0 1 0 0 6.36 3.18 3.18 0 0 0 0-6.36Zm5.18-.99a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/klaus.web"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"
+                  />
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
