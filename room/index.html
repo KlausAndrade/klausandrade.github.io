@@ -373,6 +373,31 @@
         gap: 14px;
       }
 
+      /* Map */
+      .map-wrap {
+        margin-top: 26px;
+      }
+      .map-wrap iframe {
+        width: 100%;
+        height: 340px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        display: block;
+      }
+      .map-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .map-link:hover {
+        text-decoration: underline;
+      }
+
       /* Terms table */
       .terms {
         width: 100%;
@@ -926,6 +951,21 @@
               loading="lazy"
             />
           </div>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Map showing Vigerslevvej 311, Valby, Copenhagen"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=12.4831%2C55.6410%2C12.5071%2C55.6530&amp;layer=mapnik&amp;marker=55.647032%2C12.495065"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Vigerslevvej+311%2C+2500+Valby%2C+Copenhagen"
+            target="_blank"
+            rel="noopener noreferrer"
+            >📍 Open in Google Maps</a
+          >
         </div>
       </div>
     </section>
